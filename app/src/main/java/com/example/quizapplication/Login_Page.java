@@ -21,6 +21,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Login_Page extends AppCompatActivity {
 
@@ -92,6 +93,10 @@ public class Login_Page extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                Intent i = new Intent(Login_Page.this,Forget_Pass.class);
+                startActivity(i);
+
+
             }
         });
 
@@ -112,6 +117,7 @@ public class Login_Page extends AppCompatActivity {
                             Intent i = new Intent(Login_Page.this, MainActivity.class);
                             startActivity(i);
                             finish();
+
                             progressBar.setVisibility(View.INVISIBLE);
                             Toast.makeText(Login_Page.this, "Sign in is Succesful", Toast.LENGTH_SHORT).show();
 
@@ -127,4 +133,15 @@ public class Login_Page extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseUser user = auth.getCurrentUser();
+        if (user != null){
+            Intent i = new Intent(Login_Page.this, MainActivity.class);
+            startActivity(i);
+            finish();
+        }
+    }
 }
