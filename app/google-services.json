@@ -12,7 +12,12 @@
           "package_name": "com.example.quizapplication"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "22702366647-f71dpkmnd265cs44351h8b1fn0vn438l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBrZeE25BFU4FzzP_uUyBIHForqSb4D3as"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22702366647-f71dpkmnd265cs44351h8b1fn0vn438l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
